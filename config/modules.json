@@ -113,6 +113,67 @@
           "url": "https://example.com/blog/monetizing"
         }
       ]
+    },
+    "bestOfTopics": {
+      "enabled": true,
+      "title": "Best Of",
+      "description": "Curated content on specific topics",
+      "topics": [
+        {
+          "id": "docker",
+          "name": "Docker",
+          "description": "Everything about containerization and Docker",
+          "featured": true,
+          "content": [
+            {
+              "title": "Docker Basics for Beginners",
+              "description": "Learn the fundamentals of Docker",
+              "url": "https://example.com/docker/basics"
+            },
+            {
+              "title": "Docker Compose Deep Dive",
+              "description": "Master multi-container applications",
+              "url": "https://example.com/docker/compose"
+            },
+            {
+              "title": "Docker Best Practices",
+              "description": "Production-ready Docker strategies",
+              "url": "https://example.com/docker/best-practices"
+            }
+          ]
+        },
+        {
+          "id": "kubernetes",
+          "name": "Kubernetes",
+          "description": "Container orchestration and Kubernetes",
+          "featured": true,
+          "content": [
+            {
+              "title": "Kubernetes 101",
+              "description": "Introduction to Kubernetes",
+              "url": "https://example.com/k8s/101"
+            },
+            {
+              "title": "Deploying to Kubernetes",
+              "description": "Step-by-step deployment guide",
+              "url": "https://example.com/k8s/deploy"
+            }
+          ]
+        },
+        {
+          "id": "nextjs",
+          "name": "Next.js",
+          "description": "Modern React framework and Next.js",
+          "featured": true,
+          "content": [
+            {
+              "title": "Next.js App Router",
+              "description": "Building with the new App Router",
+              "url": "https://example.com/nextjs/app-router"
+            }
+          ]
+        }
+      ]
     }
   }
 }
