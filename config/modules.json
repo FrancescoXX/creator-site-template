@@ -1,0 +1,90 @@
+{
+  "modules": {
+    "socialMedia": {
+      "enabled": true,
+      "title": "Social Media",
+      "links": [
+        {
+          "platform": "Twitter",
+          "url": "https://twitter.com/yourhandle",
+          "icon": "𝕏"
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/yourprofile",
+          "icon": "in"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://instagram.com/yourhandle",
+          "icon": "📷"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://youtube.com/@yourchannel",
+          "icon": "▶"
+        }
+      ]
+    },
+    "podcast": {
+      "enabled": true,
+      "title": "Podcast",
+      "description": "Listen to my podcast",
+      "links": [
+        {
+          "platform": "Spotify",
+          "url": "https://open.spotify.com/show/yourpodcast"
+        },
+        {
+          "platform": "Apple Podcasts",
+          "url": "https://podcasts.apple.com/podcast/yourpodcast"
+        },
+        {
+          "platform": "RSS Feed",
+          "url": "https://yoursite.com/podcast/feed"
+        }
+      ]
+    },
+    "asAGuest": {
+      "enabled": true,
+      "title": "As a Guest",
+      "description": "Appearances on other podcasts and shows",
+      "appearances": [
+        {
+          "show": "Popular Podcast Name",
+          "date": "2024-10-15",
+          "url": "https://example.com/episode"
+        },
+        {
+          "show": "Another Great Show",
+          "date": "2024-09-20",
+          "url": "https://example.com/episode2"
+        }
+      ]
+    },
+    "products": {
+      "enabled": true,
+      "title": "Products",
+      "description": "Check out my products and services",
+      "items": [
+        {
+          "name": "Product 1",
+          "description": "Description of product 1",
+          "url": "https://example.com/product1"
+        },
+        {
+          "name": "Product 2",
+          "description": "Description of product 2",
+          "url": "https://example.com/product2"
+        }
+      ]
+    },
+    "publicSpeaking": {
+      "enabled": true,
+      "title": "Public Speaking",
+      "description": "Hire me for speaking engagements",
+      "contactUrl": "https://example.com/contact"
+    }
+  }
+}
+
