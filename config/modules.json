@@ -3,6 +3,10 @@
     "enabled": true,
     "url": "https://github.com/FrancescoXX/creator-site-template"
   },
+  "header": {
+    "name": "Francesco Ciulla",
+    "tagline": "Content Creator & Entrepreneur"
+  },
   "modules": {
     "socialMedia": {
       "enabled": true,
