@@ -14,6 +14,10 @@ interface ModuleConfig {
     enabled: boolean;
     url: string;
   };
+  header?: {
+    name: string;
+    tagline: string;
+  };
   modules: {
     [key: string]: {
       enabled: boolean;
@@ -86,10 +90,10 @@ export default function Home() {
       <header className="border-b border-gray-800">
         <div className="max-w-4xl mx-auto px-6 py-16 sm:py-20">
           <h1 className="text-4xl sm:text-5xl font-light mb-4">
-            Your Name
+            {config.header?.name || "Your Name"}
           </h1>
           <p className="text-gray-400 text-lg font-light">
-            Content Creator & Entrepreneur
+            {config.header?.tagline || "Content Creator & Entrepreneur"}
           </p>
         </div>
       </header>
