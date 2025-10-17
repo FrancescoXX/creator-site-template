@@ -1,4 +1,8 @@
 {
+  "github": {
+    "enabled": true,
+    "url": "https://github.com/FrancescoXX/creator-site-template"
+  },
   "modules": {
     "socialMedia": {
       "enabled": true,
@@ -84,6 +88,31 @@
       "title": "Public Speaking",
       "description": "Hire me for speaking engagements",
       "contactUrl": "https://example.com/contact"
+    },
+    "blog": {
+      "enabled": true,
+      "title": "Blog",
+      "description": "Latest articles and insights",
+      "articles": [
+        {
+          "title": "Getting Started with Content Creation",
+          "excerpt": "A comprehensive guide to starting your content creation journey",
+          "date": "2024-10-15",
+          "url": "https://example.com/blog/getting-started"
+        },
+        {
+          "title": "Building an Audience from Scratch",
+          "excerpt": "Strategies and tips for growing your audience organically",
+          "date": "2024-10-10",
+          "url": "https://example.com/blog/building-audience"
+        },
+        {
+          "title": "Monetizing Your Content",
+          "excerpt": "Different ways to turn your content into revenue",
+          "date": "2024-10-05",
+          "url": "https://example.com/blog/monetizing"
+        }
+      ]
     }
   }
 }
