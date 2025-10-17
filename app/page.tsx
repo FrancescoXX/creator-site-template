@@ -7,6 +7,7 @@ import AsAGuestSection from "./components/AsAGuestSection";
 import ProductsSection from "./components/ProductsSection";
 import PublicSpeakingSection from "./components/PublicSpeakingSection";
 import BlogSection from "./components/BlogSection";
+import BestOfTopicsSection from "./components/BestOfTopicsSection";
 
 interface ModuleConfig {
   github?: {
@@ -145,6 +146,15 @@ export default function Home() {
             title={config.modules.blog.title}
             description={config.modules.blog.description}
             articles={config.modules.blog.articles}
+          />
+        )}
+
+        {/* Best Of Topics Section */}
+        {config.modules.bestOfTopics?.enabled && (
+          <BestOfTopicsSection
+            title={config.modules.bestOfTopics.title}
+            description={config.modules.bestOfTopics.description}
+            topics={config.modules.bestOfTopics.topics}
           />
         )}
       </main>
