@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f0f0f;
+  --background: #000000;
   --foreground: #ffffff;
 
   /* Theme variables - defaults */
-  --theme-background: #0f0f0f;
+  --theme-background: #000000;
   --theme-background-secondary: #1a1a1a;
   --theme-primary: #ffffff;
-  --theme-secondary: #0f0f0f;
+  --theme-secondary: #000000;
   --theme-accent: #ffffff;
   --theme-border: #333333;
   --theme-text: #ffffff;

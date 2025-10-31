@@ -24,10 +24,10 @@ export const themes: Theme[] = [
     name: "Default",
     category: "curated",
     colors: {
-      background: "#0f0f0f",
+      background: "#000000",
       backgroundSecondary: "#1a1a1a",
       primary: "#ffffff",
-      secondary: "#0f0f0f",
+      secondary: "#000000",
       accent: "#ffffff",
       border: "#333333",
       text: "#ffffff",
@@ -39,7 +39,8 @@ export const themes: Theme[] = [
     name: "Agate",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #1a4d4d 0%, #2d7a5e 50%, #c8ff00 100%)",
+      background:
+        "linear-gradient(135deg, #1a4d4d 0%, #2d7a5e 50%, #c8ff00 100%)",
       primary: "#c8ff00",
       secondary: "#1a4d4d",
       accent: "#c8ff00",
@@ -127,7 +128,8 @@ export const themes: Theme[] = [
     name: "Bloom",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #c41e3a 0%, #5b47d9 50%, #4169e1 100%)",
+      background:
+        "linear-gradient(135deg, #c41e3a 0%, #5b47d9 50%, #4169e1 100%)",
       backgroundSecondary: "#5b47d9",
       primary: "#ffffff",
       secondary: "#c41e3a",
@@ -187,7 +189,8 @@ export const themes: Theme[] = [
     name: "Groove",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 25%, #4ecdc4 75%, #5c7cfa 100%)",
+      background:
+        "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 25%, #4ecdc4 75%, #5c7cfa 100%)",
       primary: "#ffffff",
       secondary: "#ff6b6b",
       accent: "#4ecdc4",
@@ -246,7 +249,8 @@ export const themes: Theme[] = [
     name: "Nourish",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #5a6b2f 0%, #8b9556 50%, #d4e89f 100%)",
+      background:
+        "linear-gradient(135deg, #5a6b2f 0%, #8b9556 50%, #d4e89f 100%)",
       primary: "#ffffff",
       secondary: "#5a6b2f",
       accent: "#d4e89f",
@@ -260,7 +264,8 @@ export const themes: Theme[] = [
     name: "Rise",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #d4573b 0%, #e8926f 50%, #5c9fd9 100%)",
+      background:
+        "linear-gradient(135deg, #d4573b 0%, #e8926f 50%, #5c9fd9 100%)",
       primary: "#ffffff",
       secondary: "#d4573b",
       accent: "#5c9fd9",
@@ -274,7 +279,8 @@ export const themes: Theme[] = [
     name: "Sweat",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #1a1a3e 0%, #d946ef 50%, #3b82f6 100%)",
+      background:
+        "linear-gradient(135deg, #1a1a3e 0%, #d946ef 50%, #3b82f6 100%)",
       primary: "#ffffff",
       secondary: "#1a1a3e",
       accent: "#d946ef",
@@ -288,7 +294,8 @@ export const themes: Theme[] = [
     name: "Tress",
     category: "curated",
     colors: {
-      background: "linear-gradient(135deg, #4a3f2a 0%, #6b5d42 50%, #d4c4a0 100%)",
+      background:
+        "linear-gradient(135deg, #4a3f2a 0%, #6b5d42 50%, #d4c4a0 100%)",
       primary: "#ffffff",
       secondary: "#4a3f2a",
       accent: "#d4c4a0",
@@ -302,7 +309,8 @@ export const themes: Theme[] = [
     name: "Twilight",
     category: "curated",
     colors: {
-      background: "linear-gradient(180deg, #4a4a6a 0%, #7a6b9a 50%, #d4b3e8 100%)",
+      background:
+        "linear-gradient(180deg, #4a4a6a 0%, #7a6b9a 50%, #d4b3e8 100%)",
       primary: "#ffffff",
       secondary: "#4a4a6a",
       accent: "#d4b3e8",
@@ -332,8 +340,11 @@ export const getThemeById = (id: string): Theme | undefined => {
   return themes.find((theme) => theme.id === id);
 };
 
-export const getThemesByCategory = (category: "customizable" | "curated"): Theme[] => {
+export const getThemesByCategory = (
+  category: "customizable" | "curated"
+): Theme[] => {
   return themes.filter((theme) => theme.category === category);
 };
 
-export const defaultTheme = themes.find((theme) => theme.id === "default") || themes[0];
+export const defaultTheme =
+  themes.find((theme) => theme.id === "default") || themes[0];
