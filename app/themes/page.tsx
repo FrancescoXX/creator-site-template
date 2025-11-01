@@ -14,15 +14,32 @@ interface ConfigData {
 
 export default function ThemesPage() {
   const [config, setConfig] = useState<ConfigData | null>(null);
+  const [configError, setConfigError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadConfig = async () => {
       try {
         const response = await fetch("/api/config");
-        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch config: ${response.status} ${response.statusText}`
+          );
+        }
+
+        let data;
+        try {
+          data = await response.json();
+        } catch (parseError) {
+          throw new Error("Failed to parse config JSON");
+        }
+
         setConfig(data);
+        setConfigError(null);
       } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "Unknown error loading config";
         console.error("Error loading config:", error);
+        setConfigError(errorMessage);
       }
     };
 
@@ -68,6 +85,18 @@ export default function ThemesPage() {
 
       {/* Main content - Split layout */}
       <div className="max-w-7xl mx-auto px-6 py-8">
+        {configError && (
+          <div
+            className="mb-4 p-4 rounded border"
+            style={{
+              borderColor: "var(--theme-border)",
+              background: "var(--theme-background-secondary)",
+              color: "var(--theme-text-secondary)"
+            }}
+          >
+            <p className="text-sm">⚠️ {configError}</p>
+          </div>
+        )}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left side - Theme Selector */}
           <div className="lg:pr-8">

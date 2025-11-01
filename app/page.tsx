@@ -199,7 +199,7 @@ export default function Home() {
       <footer className="border-t mt-16" style={{ borderColor: "var(--theme-border)" }}>
         <div className="max-w-4xl mx-auto px-6 py-8">
           <p className="text-sm" style={{ color: "var(--theme-text-secondary)" }}>
-            © 2024. All rights reserved.
+            © {new Date().getFullYear()}. All rights reserved.
           </p>
         </div>
       </footer>

@@ -32,12 +32,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   // Load theme from localStorage on mount
   useEffect(() => {
     setMounted(true);
-    const savedThemeId = localStorage.getItem("selectedTheme");
-    if (savedThemeId) {
-      const theme = getThemeById(savedThemeId);
-      if (theme) {
-        setCurrentTheme(theme);
+    try {
+      const savedThemeId = localStorage.getItem("selectedTheme");
+      if (savedThemeId) {
+        const theme = getThemeById(savedThemeId);
+        if (theme) {
+          setCurrentTheme(theme);
+        }
       }
+    } catch (error) {
+      console.error("Failed to load theme from localStorage:", error);
+      // Fall back to defaultTheme (already set in state)
     }
   }, []);
 
@@ -63,7 +68,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   const setTheme = (theme: Theme) => {
     setCurrentTheme(theme);
-    localStorage.setItem("selectedTheme", theme.id);
+    try {
+      localStorage.setItem("selectedTheme", theme.id);
+    } catch (error) {
+      console.error("Failed to save theme to localStorage:", error);
+      // Continue without throwing - app remains usable even if persistence fails
+    }
   };
 
   return (
