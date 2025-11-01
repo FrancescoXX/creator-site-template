@@ -14,8 +14,8 @@ export default function SocialMediaSection({
   links,
 }: SocialMediaSectionProps) {
   return (
-    <section className="py-12 border-t border-gray-800">
-      <h2 className="text-2xl font-light mb-8 text-white">{title}</h2>
+    <section className="py-12 border-t" style={{ borderColor: "var(--theme-border)" }}>
+      <h2 className="text-2xl font-light mb-8" style={{ color: "var(--theme-text)" }}>{title}</h2>
       <div className="flex flex-wrap gap-6">
         {links.map((link) => (
           <a
@@ -23,7 +23,8 @@ export default function SocialMediaSection({
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2"
+            className="transition-colors duration-200 flex items-center gap-2 hover:opacity-70"
+            style={{ color: "var(--theme-text-secondary)" }}
           >
             {link.icon && <span className="text-lg">{link.icon}</span>}
             <span>{link.platform}</span>
