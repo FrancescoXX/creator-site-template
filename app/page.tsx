@@ -8,6 +8,7 @@ import ProductsSection from "./components/ProductsSection";
 import PublicSpeakingSection from "./components/PublicSpeakingSection";
 import BlogSection from "./components/BlogSection";
 import BestOfTopicsSection from "./components/BestOfTopicsSection";
+import HeaderSection from "./components/HeaderSection";
 
 interface ModuleConfig {
   github?: {
@@ -17,6 +18,7 @@ interface ModuleConfig {
   header?: {
     name: string;
     tagline: string;
+    profilePicture: string;
   };
   modules: {
     [key: string]: {
@@ -87,16 +89,11 @@ export default function Home() {
       )}
 
       {/* Header */}
-      <header className="border-b border-gray-800">
-        <div className="max-w-4xl mx-auto px-6 py-16 sm:py-20">
-          <h1 className="text-4xl sm:text-5xl font-light mb-4">
-            {config.header?.name || "Your Name"}
-          </h1>
-          <p className="text-gray-400 text-lg font-light">
-            {config.header?.tagline || "Content Creator & Entrepreneur"}
-          </p>
-        </div>
-      </header>
+      <HeaderSection
+        name={config.header?.name}
+        tagline={config.header?.tagline}
+        profilePicture={config.header?.profilePicture}
+      />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-12">
@@ -166,9 +163,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-800 mt-16">
         <div className="max-w-4xl mx-auto px-6 py-8">
-          <p className="text-gray-500 text-sm">
-            © 2024. All rights reserved.
-          </p>
+          <p className="text-gray-500 text-sm">© 2024. All rights reserved.</p>
         </div>
       </footer>
     </div>

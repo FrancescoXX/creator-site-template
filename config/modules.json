@@ -5,7 +5,8 @@
   },
   "header": {
     "name": "Francesco Ciulla",
-    "tagline": "Content Creator & Entrepreneur"
+    "tagline": "Content Creator & Entrepreneur",
+    "profilePicture": "/profile.jpg"
   },
   "modules": {
     "socialMedia": {
@@ -181,4 +182,3 @@
     }
   }
 }
-
