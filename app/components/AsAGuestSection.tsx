@@ -35,6 +35,11 @@ export default function AsAGuestSection({
   description,
   appearances,
 }: AsAGuestSectionProps) {
+  // Sort by date and get the 2 most recent
+  const recentAppearances = [...appearances]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 2);
+
   return (
     <section className="py-12 border-t border-gray-800">
       <div className="flex justify-between items-center mb-2">
@@ -46,9 +51,10 @@ export default function AsAGuestSection({
           View All →
         </a>
       </div>
-      <p className="text-gray-400 mb-8">{description}</p>
+      <p className="text-gray-400 mb-2">{description}</p>
+      <p className="text-gray-500 text-sm mb-8">Showing the 2 most recent episodes</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {appearances.map((appearance, index) => {
+        {recentAppearances.map((appearance, index) => {
           const videoId = getYouTubeVideoId(appearance.url);
           
           return (
