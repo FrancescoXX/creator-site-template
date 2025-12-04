@@ -10,6 +10,26 @@ interface AsAGuestSectionProps {
   appearances: Appearance[];
 }
 
+// Extract YouTube video ID from various URL formats
+function getYouTubeVideoId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=)([^&\s]+)/,
+    /(?:youtu\.be\/)([^&\s?]+)/,
+    /(?:youtube\.com\/embed\/)([^&\s?]+)/,
+    /(?:youtube\.com\/shorts\/)([^&\s?]+)/,
+    /(?:youtube\.com\/live\/)([^&\s?]+)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match && match[1]) {
+      // Remove any query parameters or fragments
+      return match[1].split('?')[0].split('&')[0].split('#')[0];
+    }
+  }
+  return null;
+}
+
 export default function AsAGuestSection({
   title,
   description,
@@ -17,27 +37,64 @@ export default function AsAGuestSection({
 }: AsAGuestSectionProps) {
   return (
     <section className="py-12 border-t border-gray-800">
-      <h2 className="text-2xl font-light mb-2 text-white">{title}</h2>
+      <div className="flex justify-between items-center mb-2">
+        <h2 className="text-2xl font-light text-white">{title}</h2>
+        <a
+          href="/guest-appearances"
+          className="text-gray-400 hover:text-white text-sm transition-colors"
+        >
+          View All →
+        </a>
+      </div>
       <p className="text-gray-400 mb-8">{description}</p>
-      <div className="space-y-4">
-        {appearances.map((appearance) => (
-          <a
-            key={appearance.show}
-            href={appearance.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 border border-gray-800 hover:border-gray-600 transition-colors duration-200 group"
-          >
-            <div className="flex justify-between items-start">
-              <h3 className="text-white group-hover:text-gray-300 transition-colors">
-                {appearance.show}
-              </h3>
-              <span className="text-gray-500 text-sm">
-                {new Date(appearance.date).toLocaleDateString()}
-              </span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {appearances.map((appearance, index) => {
+          const videoId = getYouTubeVideoId(appearance.url);
+          
+          return (
+            <div
+              key={`${appearance.show}-${index}`}
+              className="border border-gray-800 hover:border-gray-600 transition-all duration-300 group overflow-hidden"
+            >
+              {/* YouTube Embed */}
+              {videoId && (
+                <div className="relative aspect-video bg-gray-900">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={appearance.show}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              )}
+              
+              {/* Video Info */}
+              <div className="p-4 bg-black">
+                <h3 className="text-white font-light mb-2 group-hover:text-gray-300 transition-colors line-clamp-2">
+                  {appearance.show}
+                </h3>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">
+                    {new Date(appearance.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </span>
+                  <a
+                    href={appearance.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    Watch on YouTube →
+                  </a>
+                </div>
+              </div>
             </div>
-          </a>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

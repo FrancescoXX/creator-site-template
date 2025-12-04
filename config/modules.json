@@ -55,18 +55,483 @@
     },
     "asAGuest": {
       "enabled": true,
-      "title": "As a Guest",
-      "description": "Appearances on other podcasts and shows",
+      "title": "Francesco as a Guest",
+      "description": "Watch Francesco's appearances on various podcasts and shows",
       "appearances": [
         {
-          "show": "Popular Podcast Name",
-          "date": "2024-10-15",
-          "url": "https://example.com/episode"
+          "show": "Story of an Introvertuber - Francesco Ciulla",
+          "date": "2020-12-15",
+          "url": "https://www.youtube.com/watch?v=9CMTvj9gNiw"
         },
         {
-          "show": "Another Great Show",
-          "date": "2024-09-20",
-          "url": "https://example.com/episode2"
+          "show": "#3 Bitfumes Dev Talk with Francesco - Javascript & DevOps Enthusiast",
+          "date": "2020-12-20",
+          "url": "https://www.youtube.com/watch?v=Npuz7PPWg6k"
+        },
+        {
+          "show": "From Volleyball Teacher to Developer Advocate 🥑",
+          "date": "2021-07-27",
+          "url": "https://youtu.be/MXWEzndS3hc"
+        },
+        {
+          "show": "What is Developer Advocacy and How To Get Started",
+          "date": "2021-11-29",
+          "url": "https://youtu.be/rrR-TSu-m3M"
+        },
+        {
+          "show": "Get started into Web3",
+          "date": "2022-01-20",
+          "url": "https://youtu.be/zsA7ZR8SB4M"
+        },
+        {
+          "show": "Tech Unfiltered - Social Media, YouTube and Community",
+          "date": "2021-09-07",
+          "url": "https://youtu.be/KeJ7MlwwVK4"
+        },
+        {
+          "show": "Dev Talk with Francesco Ciulla - Ten Days of Code",
+          "date": "2021-10-24",
+          "url": "https://youtu.be/gq0j48w2Ra8"
+        },
+        {
+          "show": "(ITA) Parliamo della vita di un Twitter Influencer e Developer Advocate",
+          "date": "2021-10-04",
+          "url": "https://youtu.be/bbCVz2i06S0"
+        },
+        {
+          "show": "Docker Build: Building Microservices with JavaScript, Python and Docker",
+          "date": "2021-11-04",
+          "url": "https://youtu.be/QFl0EFGr5e4"
+        },
+        {
+          "show": "Interview with Francesco Ciulla - Get Monetised on YouTube",
+          "date": "2021-02-19",
+          "url": "https://youtu.be/Bp7Dp_uru7g"
+        },
+        {
+          "show": "From A Steady Job To Freelancing",
+          "date": "2021-04-19",
+          "url": "https://youtu.be/B78yL-g8hfI"
+        },
+        {
+          "show": "Open source reviews - share your GitHub repos",
+          "date": "2021-12-23",
+          "url": "https://youtu.be/wQvlaYc5nl8"
+        },
+        {
+          "show": "How to build a personal brand effectively",
+          "date": "2021-10-18",
+          "url": "https://youtu.be/IYE4u7irvhM"
+        },
+        {
+          "show": "(ITA) storiedidevelopers",
+          "date": "2021-06-13",
+          "url": "https://youtu.be/lKBEZGzDKcA"
+        },
+        {
+          "show": "Are You Introverted ?? Be An Awesome IntroverTuber",
+          "date": "2020-12-23",
+          "url": "https://youtu.be/KlB30zX2rzo"
+        },
+        {
+          "show": "Tech Talks E1 - Francesco Ciulla",
+          "date": "2022-01-13",
+          "url": "https://youtu.be/kBwMQlC4nGo"
+        },
+        {
+          "show": "Chatting with Docker Captain, Content Creator, Developer Advocate",
+          "date": "2021-12-19",
+          "url": "https://youtu.be/mS5UNrOGl_s"
+        },
+        {
+          "show": "Confronting a Docker Captain",
+          "date": "2021-08-14",
+          "url": "https://youtu.be/lmSsiIJ-_Xg"
+        },
+        {
+          "show": "Women: The Heart of Society",
+          "date": "2021-03-08",
+          "url": "https://youtu.be/vqWs5-vF2To"
+        },
+        {
+          "show": "Flutter Engage Watch Party w/ Robert Brunhage",
+          "date": "2021-03-03",
+          "url": "https://youtu.be/V_wDWgpKcQc"
+        },
+        {
+          "show": "100k Stream & Course Giveaways!",
+          "date": "2021-02-02",
+          "url": "https://youtu.be/DIR4Pk51w9s"
+        },
+        {
+          "show": "Top Web Dev Videos You NEED to Watch!",
+          "date": "2021-01-23",
+          "url": "https://youtu.be/KcGYLhYDqRY"
+        },
+        {
+          "show": "Tips for Learning Online",
+          "date": "2021-07-07",
+          "url": "https://youtu.be/1UPHrnfaEHc"
+        },
+        {
+          "show": "Content Creation for Developers",
+          "date": "2021-12-04",
+          "url": "https://youtu.be/HZKMLzbq-LA"
+        },
+        {
+          "show": "Grafana Dashboard with Node-Cron | Social Data Dashboard",
+          "date": "2021-04-24",
+          "url": "https://youtu.be/ESXUT9dGM60"
+        },
+        {
+          "show": "Chat with... Francesco Ciulla: aumentare la visibilità grazie ai social network",
+          "date": "2021-04-25",
+          "url": "https://www.youtube.com/watch?v=WzZgWusYpGM"
+        },
+        {
+          "show": "Hang out and chat with Francesco",
+          "date": "2020-12-18",
+          "url": "https://youtu.be/ZLM8CDzrhMQ"
+        },
+        {
+          "show": "Setup a NodeJS server with Docker Deployment",
+          "date": "2021-01-12",
+          "url": "https://youtu.be/eJWNYFCrYfI"
+        },
+        {
+          "show": "Setup Postgres and sequelize in a NodeJS application",
+          "date": "2021-01-19",
+          "url": "https://youtu.be/cvjhfuH4HrU"
+        },
+        {
+          "show": "How to build Online Presence as a Developer",
+          "date": "2021-01-09",
+          "url": "https://youtu.be/OHb7pngGDtk"
+        },
+        {
+          "show": "Portainer Community Event : Portainer CE 2.11",
+          "date": "2021-12-21",
+          "url": "https://youtu.be/eCv3Y4BXBSo"
+        },
+        {
+          "show": "Tips on Teaching and Learning - Docker Captain Panel",
+          "date": "2021-12-16",
+          "url": "https://youtu.be/Junp_kj9LYY"
+        },
+        {
+          "show": "Docker for Different Languages",
+          "date": "2021-09-24",
+          "url": "https://youtu.be/cbpC039q03g"
+        },
+        {
+          "show": "Getting Started with Containerization",
+          "date": "2021-09-24",
+          "url": "https://youtu.be/lMrjxvVl2ig"
+        },
+        {
+          "show": "Docker: Let's Get Started! Austin Software Tech Talk",
+          "date": "2022-02-10",
+          "url": "https://youtu.be/iI0YT7lxRog"
+        },
+        {
+          "show": "How he switched from a Volleyball coach to Devops Engineer & Docker Captain",
+          "date": "2022-02-14",
+          "url": "https://youtu.be/TA-rj5xN5zo"
+        },
+        {
+          "show": "Unboxing DevRel with @Francesco Ciulla - Episode#01",
+          "date": "2022-02-24",
+          "url": "https://www.youtube.com/watch?v=-UiarME5O2E"
+        },
+        {
+          "show": "Quiz & Q/A about Docker (& give aways) with Francesco Ciulla",
+          "date": "2022-02-12",
+          "url": "https://www.youtube.com/watch?v=h8dvivPhpM8"
+        },
+        {
+          "show": "How Content Creation Got Me Opportunities",
+          "date": "2022-03-17",
+          "url": "https://youtu.be/DI20n5xWVi4"
+        },
+        {
+          "show": "How to get into tech and standout with Francesco Ciulla",
+          "date": "2022-03-21",
+          "url": "https://youtu.be/uP4Q07ViQzk"
+        },
+        {
+          "show": "Scope of DevOps",
+          "date": "2022-04-19",
+          "url": "https://www.youtube.com/watch?v=fM0KsSCNjvk"
+        },
+        {
+          "show": "cadosdev project Session 1",
+          "date": "2022-05-05",
+          "url": "https://www.youtube.com/watch?v=1ulnU5ppXag"
+        },
+        {
+          "show": "Web RTC Full Course & More",
+          "date": "2022-05-05",
+          "url": "https://www.youtube.com/watch?v=QsH8FL0952k"
+        },
+        {
+          "show": "What is Web 3.0?",
+          "date": "2022-05-07",
+          "url": "https://youtu.be/36ZQZu26YzY"
+        },
+        {
+          "show": "Introverted Developers on Social Media",
+          "date": "2022-06-29",
+          "url": "https://www.youtube.com/watch?v=DoBhLPVrJWQ"
+        },
+        {
+          "show": "Tech Podcast Series",
+          "date": "2022-07-04",
+          "url": "https://youtu.be/Dmcf_gNFY8w"
+        },
+        {
+          "show": "How to Find Remote Jobs While Learning in Public",
+          "date": "2022-08-06",
+          "url": "https://youtu.be/3YafUJUqj6s"
+        },
+        {
+          "show": "Livestream with Dennis Ivy",
+          "date": "2022-08-29",
+          "url": "https://www.youtube.com/watch?v=jCzL-uoBVkQ"
+        },
+        {
+          "show": "Code Battle Hackathon Winners",
+          "date": "2022-08-31",
+          "url": "https://youtu.be/dItWfsngLJs"
+        },
+        {
+          "show": "Code Battle Hackathon",
+          "date": "2022-08-31",
+          "url": "https://www.youtube.com/watch?v=BLkasKH_sww"
+        },
+        {
+          "show": "Hackathon Submissions",
+          "date": "2022-09-07",
+          "url": "https://youtu.be/_JQPm0QwFbM"
+        },
+        {
+          "show": "Hackathon with Dennis Ivy and Danny Thompson",
+          "date": "2022-09-29",
+          "url": "https://youtu.be/X2473En3h_o"
+        },
+        {
+          "show": "Hacktoberfest with Eddie Jaoude",
+          "date": "2022-09-30",
+          "url": "https://youtu.be/1DCCbuyF20E"
+        },
+        {
+          "show": "Docker Community Event",
+          "date": "2022-11-08",
+          "url": "https://www.youtube.com/watch?v=FExxTemPqyQ"
+        },
+        {
+          "show": "Web3 Podcast",
+          "date": "2022-11-21",
+          "url": "https://youtu.be/ufJvGAFyUHY"
+        },
+        {
+          "show": "Infobip Afterparty",
+          "date": "2022-11-25",
+          "url": "https://www.youtube.com/watch?v=70JYP0wwIEY"
+        },
+        {
+          "show": "Docker All Hands 7",
+          "date": "2022-12-15",
+          "url": "https://youtu.be/yo30oF1Gflo?t=10442"
+        },
+        {
+          "show": "Drilling DevRels",
+          "date": "2023-01-09",
+          "url": "https://youtu.be/qTiFZgeuGno"
+        },
+        {
+          "show": "DevRel Discussion",
+          "date": "2023-02-10",
+          "url": "https://www.youtube.com/live/0HB7C_D9VII"
+        },
+        {
+          "show": "Volleyball Coach to Developer",
+          "date": "2023-02-28",
+          "url": "https://youtu.be/qnNpTFBzYg8"
+        },
+        {
+          "show": "Content Creation As A CAREER",
+          "date": "2023-06-28",
+          "url": "https://www.youtube.com/watch?v=ly2iPB8Z6rY"
+        },
+        {
+          "show": "Tech Talk with Stefano Le Pera",
+          "date": "2023-09-26",
+          "url": "https://www.youtube.com/watch?v=CYwh3pfMXEQ"
+        },
+        {
+          "show": "DockerCon 2023 Announcements Live Show",
+          "date": "2023-10-05",
+          "url": "https://www.youtube.com/live/NCwzV3J8Op0?t=2579"
+        },
+        {
+          "show": "Docker Community Live",
+          "date": "2023-11-11",
+          "url": "https://www.youtube.com/live/yR47mknQBi4?t=6177"
+        },
+        {
+          "show": "Code Europe Talk",
+          "date": "2023-12-29",
+          "url": "https://www.youtube.com/watch?v=aoI8tlXN9-s"
+        },
+        {
+          "show": "Developer Career Talk",
+          "date": "2024-01-08",
+          "url": "https://www.youtube.com/watch?v=iRmtE4tAUtE"
+        },
+        {
+          "show": "Livello2 Tech Discussion",
+          "date": "2024-03-20",
+          "url": "https://www.youtube.com/watch?v=_MuMCZUYYc4"
+        },
+        {
+          "show": "DevOps and Docker Insights",
+          "date": "2024-04-10",
+          "url": "https://www.youtube.com/watch?v=mPWc_kJI2ls"
+        },
+        {
+          "show": "Building with Docker",
+          "date": "2024-04-12",
+          "url": "https://youtu.be/RBNfriFGSCg"
+        },
+        {
+          "show": "Developer Advocacy Journey",
+          "date": "2024-04-16",
+          "url": "https://youtu.be/amo6NRFcBWI"
+        },
+        {
+          "show": "Tech Interview with Tejas Kumar",
+          "date": "2024-04-22",
+          "url": "https://www.youtube.com/watch?v=7erWco3K2DI"
+        },
+        {
+          "show": "Open Source and DevOps",
+          "date": "2024-05-27",
+          "url": "https://www.youtube.com/watch?v=XNj3xFyK9Vg"
+        },
+        {
+          "show": "Docker and Containers Live",
+          "date": "2024-06-20",
+          "url": "https://www.youtube.com/live/Ci_-FxzVH0w"
+        },
+        {
+          "show": "Developer Community Talk",
+          "date": "2024-07-03",
+          "url": "https://www.youtube.com/watch?v=-de63NpbnUM"
+        },
+        {
+          "show": "Tech Career Insights",
+          "date": "2024-04-16",
+          "url": "https://youtu.be/D9kW5RW4tAU"
+        },
+        {
+          "show": "Quick Tech Tips",
+          "date": "2024-07-18",
+          "url": "https://www.youtube.com/shorts/ktocAqN0wb8"
+        },
+        {
+          "show": "DevOps Best Practices",
+          "date": "2024-08-05",
+          "url": "https://www.youtube.com/watch?v=DEGrpUZF-sY"
+        },
+        {
+          "show": "Container Security Discussion",
+          "date": "2024-09-19",
+          "url": "https://youtu.be/sn0sL_yBia8"
+        },
+        {
+          "show": "Docker Quick Tips",
+          "date": "2024-10-22",
+          "url": "https://www.youtube.com/shorts/d4mdxPP7keY"
+        },
+        {
+          "show": "Developer Relations Live",
+          "date": "2025-03-21",
+          "url": "https://www.youtube.com/live/z2S0YduElRs"
+        },
+        {
+          "show": "Tech Community Discussion",
+          "date": "2025-03-22",
+          "url": "https://www.youtube.com/watch?v=YDLDCm3bPfU"
+        },
+        {
+          "show": "DevOps Community Live",
+          "date": "2025-05-01",
+          "url": "https://www.youtube.com/live/bIwIE2ZroJs?t=8405"
+        },
+        {
+          "show": "Container Platform Discussion",
+          "date": "2025-05-07",
+          "url": "https://www.youtube.com/live/042AKyUHojI"
+        },
+        {
+          "show": "Building Modern Applications",
+          "date": "2025-05-14",
+          "url": "https://www.youtube.com/watch?v=rEq1ZwPGbBU"
+        },
+        {
+          "show": "Cloud Native Technologies",
+          "date": "2025-05-16",
+          "url": "https://www.youtube.com/watch?v=QkdQJsqerco"
+        },
+        {
+          "show": "Developer Advocate Insights",
+          "date": "2025-05-17",
+          "url": "https://www.youtube.com/live/LBEiadpin2A"
+        },
+        {
+          "show": "Tech Tips Short",
+          "date": "2025-05-17",
+          "url": "https://www.youtube.com/shorts/25AUYrIxDn0"
+        },
+        {
+          "show": "DevOps Quick Tips",
+          "date": "2025-05-28",
+          "url": "https://www.youtube.com/shorts/MDpG_FGZrC0"
+        },
+        {
+          "show": "Modern Development Practices",
+          "date": "2025-06-24",
+          "url": "https://www.youtube.com/watch?v=B9sKF2jOhc8"
+        },
+        {
+          "show": "Community Live Stream",
+          "date": "2025-07-24",
+          "url": "https://www.youtube.com/live/I8acOcHuE_I"
+        },
+        {
+          "show": "Developer Journey Discussion",
+          "date": "2025-09-08",
+          "url": "https://youtu.be/bYnuB1Nlwq0"
+        },
+        {
+          "show": "Tech Industry Insights",
+          "date": "2025-09-13",
+          "url": "https://www.youtube.com/watch?v=CDS2wN43qj0"
+        },
+        {
+          "show": "Career Tips for Developers",
+          "date": "2025-09-13",
+          "url": "https://www.youtube.com/shorts/Dd6fgHeJ2qY"
+        },
+        {
+          "show": "Docker and DevOps Live",
+          "date": "2025-10-01",
+          "url": "https://www.youtube.com/live/3GPOi7Tgw6k"
+        },
+        {
+          "show": "Developer Community Live",
+          "date": "2025-12-02",
+          "url": "https://www.youtube.com/live/Q1JyVbDoQSM"
         }
       ]
     },
