@@ -9,6 +9,12 @@ import BlogSection from "./components/BlogSection";
 import BestOfTopicsSection from "./components/BestOfTopicsSection";
 import RustRoadmapSection from "./components/RustRoadmapSection";
 
+interface SocialLink {
+  platform: string;
+  url: string;
+  icon?: string;
+}
+
 interface ModuleConfig {
   github?: {
     enabled: boolean;
@@ -19,10 +25,11 @@ interface ModuleConfig {
     tagline: string;
   };
   modules: {
-    [key: string]: {
+    socialMedia?: {
       enabled: boolean;
-      [key: string]: any;
+      links: SocialLink[];
     };
+    [key: string]: any;
   };
 }
 
