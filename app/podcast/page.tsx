@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-interface Appearance {
-  show: string;
+interface Episode {
+  title: string;
   date: string;
   url: string;
 }
@@ -14,11 +14,11 @@ interface Config {
     name: string;
   };
   modules: {
-    asAGuest?: {
+    podcastEpisodes?: {
       enabled: boolean;
       title: string;
       description: string;
-      appearances: Appearance[];
+      episodes: Episode[];
     };
   };
 }
@@ -43,7 +43,7 @@ function getYouTubeVideoId(url: string): string | null {
   return null;
 }
 
-export default function GuestAppearancesPage() {
+export default function PodcastPage() {
   const [config, setConfig] = useState<Config | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -71,21 +71,21 @@ export default function GuestAppearancesPage() {
     );
   }
 
-  if (!config || !config.modules.asAGuest?.enabled) {
+  if (!config || !config.modules.podcastEpisodes?.enabled) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <p className="text-gray-400">Guest appearances not available</p>
+        <p className="text-gray-400">Podcast episodes not available</p>
       </div>
     );
   }
 
-  const { title, description, appearances } = config.modules.asAGuest;
+  const { title, description, episodes } = config.modules.podcastEpisodes;
 
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <header className="border-b border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="w-full px-6 py-12">
           <Link
             href="/"
             className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-8"
@@ -108,7 +108,7 @@ export default function GuestAppearancesPage() {
           <h1 className="text-4xl sm:text-5xl font-light mb-4">{title}</h1>
           <p className="text-gray-400 text-lg font-light">{description}</p>
           <p className="text-gray-500 mt-2">
-            {appearances.length} episode{appearances.length !== 1 ? "s" : ""}
+            {episodes.length} episode{episodes.length !== 1 ? "s" : ""}
           </p>
         </div>
       </header>
@@ -116,15 +116,15 @@ export default function GuestAppearancesPage() {
       {/* Episodes Grid */}
       <main className="w-full px-6 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
-          {appearances
+          {episodes
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-            .map((appearance, index) => {
-              const videoId = getYouTubeVideoId(appearance.url);
+            .map((episode, index) => {
+              const videoId = getYouTubeVideoId(episode.url);
 
               return (
                 <a
-                  key={`${appearance.show}-${index}`}
-                  href={appearance.url}
+                  key={`${episode.title}-${index}`}
+                  href={episode.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gray-800 hover:border-gray-600 transition-all duration-300 group overflow-hidden block"
@@ -134,7 +134,7 @@ export default function GuestAppearancesPage() {
                     <div className="relative aspect-video bg-gray-900 overflow-hidden">
                       <img
                         src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`}
-                        alt={appearance.show}
+                        alt={episode.title}
                         className="w-full h-full object-cover"
                       />
                       {/* Small Play Button Overlay */}
@@ -152,13 +152,13 @@ export default function GuestAppearancesPage() {
                     </div>
                   )}
 
-                  {/* Video Info */}
+                  {/* Episode Info */}
                   <div className="p-3 bg-black">
                     <h3 className="text-sm text-white font-light mb-2 group-hover:text-gray-300 transition-colors line-clamp-2 min-h-[2.5rem]">
-                      {appearance.show}
+                      {episode.title}
                     </h3>
                     <span className="text-gray-500 text-xs">
-                      {new Date(appearance.date).toLocaleDateString("en-US", {
+                      {new Date(episode.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
@@ -173,7 +173,7 @@ export default function GuestAppearancesPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 mt-16">
-        <div className="max-w-6xl mx-auto px-6 py-8">
+        <div className="w-full px-6 py-8">
           <p className="text-gray-500 text-sm">© 2025. All rights reserved.</p>
         </div>
       </footer>

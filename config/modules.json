@@ -643,6 +643,34 @@
           ]
         }
       ]
+    },
+    "rustRoadmap": {
+      "enabled": true,
+      "title": "Rust Roadmap",
+      "description": "A concise guide to help you start learning Rust.",
+      "videoUrl": "https://youtu.be/tgJ8d9yQtKY"
+    },
+    "podcastEpisodes": {
+      "enabled": true,
+      "title": "Talking with Francesco",
+      "description": "My podcast where I discuss tech, development, and content creation",
+      "episodes": [
+        {
+          "title": "Episode 1",
+          "date": "2025-12-01",
+          "url": "https://www.youtube.com/watch?v=RTLGkE6xPrU"
+        },
+        {
+          "title": "Episode 2",
+          "date": "2025-11-24",
+          "url": "https://www.youtube.com/watch?v=u16e5sGdTLY"
+        },
+        {
+          "title": "Episode 3",
+          "date": "2025-11-17",
+          "url": "https://www.youtube.com/watch?v=GzYuqoP0nHY"
+        }
+      ]
     }
   }
 }

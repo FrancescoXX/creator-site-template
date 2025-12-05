@@ -140,7 +140,7 @@ export default function TopicPage() {
       <footer className="border-t border-gray-800 mt-16">
         <div className="max-w-4xl mx-auto px-6 py-8">
           <p className="text-gray-500 text-sm">
-            © 2024. All rights reserved.
+            © 2025. All rights reserved.
           </p>
         </div>
       </footer>

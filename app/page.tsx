@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import SocialMediaSection from "./components/SocialMediaSection";
-import PodcastSection from "./components/PodcastSection";
+import PodcastEpisodesSection from "./components/PodcastEpisodesSection";
 import AsAGuestSection from "./components/AsAGuestSection";
 import ProductsSection from "./components/ProductsSection";
 import PublicSpeakingSection from "./components/PublicSpeakingSection";
 import BlogSection from "./components/BlogSection";
 import BestOfTopicsSection from "./components/BestOfTopicsSection";
+import RustRoadmapSection from "./components/RustRoadmapSection";
 
 interface ModuleConfig {
   github?: {
@@ -100,20 +100,12 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-6 py-12">
-        {/* Social Media Section */}
-        {config.modules.socialMedia?.enabled && (
-          <SocialMediaSection
-            title={config.modules.socialMedia.title}
-            links={config.modules.socialMedia.links}
-          />
-        )}
-
-        {/* Podcast Section */}
-        {config.modules.podcast?.enabled && (
-          <PodcastSection
-            title={config.modules.podcast.title}
-            description={config.modules.podcast.description}
-            links={config.modules.podcast.links}
+        {/* Podcast Episodes Section */}
+        {config.modules.podcastEpisodes?.enabled && (
+          <PodcastEpisodesSection
+            title={config.modules.podcastEpisodes.title}
+            description={config.modules.podcastEpisodes.description}
+            episodes={config.modules.podcastEpisodes.episodes}
           />
         )}
 
@@ -123,6 +115,15 @@ export default function Home() {
             title={config.modules.asAGuest.title}
             description={config.modules.asAGuest.description}
             appearances={config.modules.asAGuest.appearances}
+          />
+        )}
+
+        {/* Rust Roadmap */}
+        {config.modules.rustRoadmap?.enabled && (
+          <RustRoadmapSection
+            title={config.modules.rustRoadmap.title}
+            description={config.modules.rustRoadmap.description}
+            videoUrl={config.modules.rustRoadmap.videoUrl}
           />
         )}
 
@@ -166,8 +167,26 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-gray-800 mt-16">
         <div className="max-w-4xl mx-auto px-6 py-8">
+          {config.modules.socialMedia?.enabled && (
+            <div className="flex flex-wrap items-center gap-4 mb-4">
+              {config.modules.socialMedia.links.map((link) => (
+                <a
+                  key={link.platform}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 text-sm"
+                >
+                  <span className="text-base font-semibold">
+                    {link.icon || link.platform.charAt(0)}
+                  </span>
+                  <span>{link.platform}</span>
+                </a>
+              ))}
+            </div>
+          )}
           <p className="text-gray-500 text-sm">
-            © 2024. All rights reserved.
+            © 2025. All rights reserved.
           </p>
         </div>
       </footer>
